@@ -1,0 +1,12 @@
+[Unit]
+Description=Monolithic Touchpad Gestures C++ Daemon (MPRIS + libpulse)
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/touchpad-gestures
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
